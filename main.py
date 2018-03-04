@@ -82,3 +82,6 @@ def application_error(e):
     """Return a custom 500 error."""
     return 'Sorry, unexpected error: {}'.format(e), 500
 
+if __name__ == '__main__':
+  port = int(os.environ.get('PORT', 5000))
+  app.run(host='0.0.0.0', port=port, debug=True)
